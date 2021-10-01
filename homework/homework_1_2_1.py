@@ -1,13 +1,10 @@
-n=int(input())
 och=0
 zaoch=0
+n=int(input())
 for i in range(n):
-    surname=input()
-    name=input()
-    age=int(input())
-    part=input()
-    if part:
-       och+=1
+    a=input().split()
+    if a[3]=='True':
+        och=och+1
     else:
-        zaoh+=1
+        zaoch=zaoch+1
 print(och,zaoch)
