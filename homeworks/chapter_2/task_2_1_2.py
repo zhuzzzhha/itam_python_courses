@@ -1,10 +1,13 @@
-s=input().split()
 def summation(s):
+    max=0
+    sum=0
     for i in range(len(s)):
-        sum=0
         if s[i]<0:
-            list(map(lambda x:x*(-2),s))
-        sum+=s[i]
-        return sum
-print(summation(s))
-
+            s[i]*=(-2)
+            if s[i]>max:
+                max=s[i]
+    for x in s:
+       sum=sum+x/max
+    print(sum)
+s=list(map(int, input().split()))
+summation(s)
